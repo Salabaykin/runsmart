@@ -25,8 +25,7 @@ gulp.task('sass', function() {
 
 gulp.task('css', function() {
   return gulp.src([
-    'node_modules/normalize.css/normalize.css',
-    'node_modules/slick-carousel/slick/slick.css',
+    'node_modules/normalize.css/normalize.css'
   ])
     .pipe(concat('_libs.scss'))
     .pipe(gulp.dest('src/sass'))
@@ -86,4 +85,4 @@ gulp.task('watch', function() {
 
 gulp.task('build', gulp.series('clean', 'export'));
 
-gulp.task('serve', gulp.parallel('css', 'sass', 'js', 'browser-sync', 'watch'));
+gulp.task('serve', gulp.parallel('css', 'sass', 'browser-sync', 'watch'));
